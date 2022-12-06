@@ -1,0 +1,180 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="{% static 'traffic/images/taxi_favicon.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="{% static 'traffic/taxi_style.css' %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'traffic/models_style.css' %}">
+    <link rel="shortcut icon" href="{% static 'tours/images/favicon.ico' %}" />
+    <title>TAXI910</title>
+</head>
+
+<body>
+   <div class="wrapper">
+        <div class="content">
+            <div class="container">
+                <div class="picture">
+                    <img src="{% static '../static/traffic/images/taxi.png' %}" alt="" class="pictire__logo">
+                    <img src="{% static '../static/traffic/images/ru.png' %}" alt="" class="pictire__ru">
+                    <img src="{% static '../static/traffic/images/18.png' %}" alt="" class="pictire__cathedral">
+                    <img src="{% static '../static/traffic/images/25.png' %}" alt="" class="pictire__MSU">
+                    <img src="{% static '../static/traffic/images/16.png' %}" alt="" class="pictire__kremlin">
+                    <img src="{% static '../static/traffic/images/phones.png' %}" alt="" class="pictire__phone">
+                    <img src="{% static '../static/traffic/images/order.png' %}" alt="" class="pictire__order">
+                    <img src="{% static '../static/traffic/images/button.png' %}" alt="" class="pictire__button">
+                    <img src="{% static '../static/traffic/images/55.png' %}" alt="" class="pictire__bigbush1">
+                    <img src="{% static '../static/traffic/images/52.png' %}" alt="" class="pictire__shadow1">
+                    <img src="{% static '../static/traffic/images/53.png' %}" alt="" class="pictire__bigbush2">
+                    <img src="{% static '../static/traffic/images/54.png' %}" alt="" class="pictire__shadow2">
+                    <img src="{% static '../static/traffic/images/38.png' %}" alt="" class="pictire__bush1">
+                    <img src="{% static '../static/traffic/images/41.png' %}" alt="" class="pictire__bush2">
+                    <img src="{% static '../static/traffic/images/43.png' %}" alt="" class="pictire__bush3">
+                    <img src="{% static '../static/traffic/images/27.png' %}" alt="" class="pictire__bush4">
+                    <img src="{% static '../static/traffic/images/20.png' %}" alt="" class="pictire__road1">
+                    <img src="{% static '../static/traffic/images/22.png' %}" alt="" class="pictire__curb1">
+                    <img src="{% static '../static/traffic/images/21.png' %}" alt="" class="pictire__curb2">
+                    <img src="{% static '../static/traffic/images/71.png' %}" alt="" class="pictire__bird">
+                    <img src="{% static '../static/traffic/images/10.png' %}" alt="" class="pictire__curb3">
+                    <img src="{% static '../static/traffic/images/11.png' %}" alt="" class="pictire__sidewalk">
+                    <img src="{% static '../static/traffic/images/44.png' %}" alt="" class="pictire__big-lamp">
+                    <img src="{% static '../static/traffic/images/45.png' %}" alt="" class="pictire__small-lamp">
+                    <img src="{% static '../static/traffic/images/24.png' %}" alt="" class="pictire__curb-white">
+                    <img src="{% static '../static/traffic/images/48.png' %}" alt="" class="pictire__taxi">
+                    <img src="{% static '../static/traffic/images/51.png' %}" alt="" class="pictire__cap">
+                    <img src="{% static '../static/traffic/images/50.png' %}" alt="" class="pictire__thumb">
+                    <img src="{% static '../static/traffic/images/49.png' %}" alt="" class="pictire__taxi-sprite">
+                    <img src="{% static '../static/traffic/images/46.png' %}" alt="" class="pictire__taxi-shadow">
+                    <img src="{% static '../static/traffic/images/3.png' %}" alt="" class="pictire__sky">
+                </div>
+
+                <div class="cars">
+                    <div class="upper">
+                        <a href="{% url 'index' %}" class="upper__link">Главная</a> | <span class="main__empty-link">Список моделей</span>
+                    </div>
+
+                    <div class="list">
+                        <div class="list__cars">
+                            <div class="list__category">
+                                Эконом класс
+                            </div>
+                            {% for car in cars %}
+                                {% if car.category == 'ЭКОНОМ' %}
+                                <a href='#' class="list__model">
+                                    <img src="{{ car.photo.url }}" alt="" class="tour__image">    
+                                    <div class="list__name">{{car.name}}</div>
+                                    <div class="list__year">{{car.year}} год ➔</div>
+                                </a>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="list__category">
+                                Комфорт класс
+                            </div>
+                            {% for car in cars %}
+                                {% if car.category == 'КОМФОРТ' %}
+                                <a href='#' class="list__model">
+                                    <img src="{{ car.photo.url }}" alt="" class="tour__image">    
+                                    <div class="list__name">{{car.name}}</div>
+                                    <div class="list__year">{{car.year}} год ➔</div>
+                                </a>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="list__category">
+                                Универсал класс
+                            </div>
+                            {% for car in cars %}
+                                {% if car.category == 'УНИВЕРСАЛ' %}
+                                <a href='#' class="list__model">
+                                    <img src="{{ car.photo.url }}" alt="" class="tour__image">    
+                                    <div class="list__name">{{car.name}}</div>
+                                    <div class="list__year">{{car.year}} год ➔</div>
+                                </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lower">
+                    <div class="lower__card">
+                        <div class="lower__info-row">
+                            <div class="lower__info-block">
+                                <div class="lower__promotion">
+                                    Продвижение сайта
+                                </div>
+                                <div class="lower__venta">
+                                    <img src="{% static '../static/traffic/images/57.png' %}" alt="" class="lower__venta-image">
+                                </div>
+                                <img src="{% static '../static/traffic/images/58.png' %}" alt="" class="lower__traffic-image">
+                            </div>
+
+                            <div class="lower__info-block small__fade">
+                                <div class="lower__title">Такси в аэропорт</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a class="lower__link">Шереметьево</a></li>
+                                        <li><a class="lower__link">Домодедово</a></li>
+                                        <li><a class="lower__link">Внуково</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower__info-block">
+                                <div class="lower__title">Связь с поддержкой</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a href="{% url 'commentaries' %}" class="lower__link">Оставить отзыв</a></li>
+                                        <li><a href="https://facebook.com/" class="lower__link">Группа Facebook</a></li>
+                                        <li><a href="https://web.telegram.org/z/" class="lower__link">Чат Telegram</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="lower__info-block">
+                                <div class="lower__title">Информация</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a href="{% url 'cars' %}" class="lower__link">Список автомобилей</a></li>
+                                        <li><a href="#div1" class="lower__link">Расчет стоимости поездки</a></li>
+                                        <li><a href="#" class="lower__link">Главная страница</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower__info-block">
+                                <div class="lower__title">О компании</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a href="{% url 'contacts' %}" class="lower__link">Контакты</a></li>
+                                        <li><a href="{% url 'about' %}" class="lower__link">О нас</a></li>
+                                        <li><a href="{% url 'message' %}" class="lower__link">Диспетчерская служба</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__row">
+                <div class="footer__copyright">
+                    © 2020-2023 Taxi940
+                </div>
+                <div class="footer__networks">
+                    <a href="https://facebook.com/" class="crop"><img src="{% static '../static/traffic/images/facebook.png' %}" alt="" class="footer__icon"></a>
+                    <a href="https://web.telegram.org/z/" class="crop"><img src="{% static '../static/traffic/images/telegram.png' %}" alt="" class="footer__icon"></a>
+                </div>
+            </div>
+        </footer>
+   </div>
+</body>
+
+</html>
+
+</html>

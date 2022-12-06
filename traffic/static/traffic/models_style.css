@@ -1,0 +1,192 @@
+* {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    font-family: 'Inter Tight', sans-serif;
+    letter-spacing: 0.45px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    font-family: 'Inter Tight', sans-serif;
+    outline: none;
+}
+
+a:focus,
+a:active {
+    font-family: 'Inter Tight', sans-serif;
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+html,
+body {
+    font-family: 'Inter Tight', sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: 'Inter Tight', sans-serif;
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    font-family: 'Inter Tight', sans-serif;
+    display: none;
+}
+
+button {
+    font-family: 'Inter Tight', sans-serif;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    font-family: 'Inter Tight', sans-serif;
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    font-family: 'Inter Tight', sans-serif;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+.upper {
+    font-size: 18px;
+    padding: 36px 0 3px 0;
+}
+
+.lower {
+    padding: 50px 0 0 0;
+}
+
+.upper__link {
+    color: red;
+    font-weight: 600;
+}
+
+.main__empty-link {
+    color: rgb(108, 108, 108);
+}
+
+.list {
+    padding: 0 0 40px 0;
+}
+
+
+.lower__link {
+    font-size: 12px;
+    line-height: 9px;
+    text-decoration: underline;
+    color: #cf0000;
+}
+
+.list__model {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+}
+
+.list__model:hover .list__name {
+    color: #7524D7;
+}
+
+.list__category {
+    font-size: 23px;
+    color: black;
+    padding: 34px 0 34px 0;
+    font-weight: 600;
+}
+
+.tour__image {
+    width: 155px;
+    height: 122px;
+}
+
+.list__name {
+    font-size: 20px;
+    color: black;
+    padding: 0 0 0 25px;
+    flex-grow: 1;
+}
+
+.list__year {
+    font-size: 20px;
+    color: blue;
+}
+
+@media (max-width: 1050px) {
+    .cars {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 530px) {
+    .list__category {
+        font-size: 21px;
+        padding: 30px 0 26px 0;
+    }
+
+    .tour__image {
+        width: 121px;
+        height: 100px;
+    }
+
+    .list__year {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 410px) {
+    .list__name {
+        font-size: 18px;
+    }
+
+    .tour__image {
+        width: 112px;
+        height: 96px;
+    }
+}

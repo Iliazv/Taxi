@@ -1,0 +1,274 @@
+* {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    font-family: 'Inter Tight', sans-serif;
+    letter-spacing: 0.45px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    font-family: 'Inter Tight', sans-serif;
+    outline: none;
+}
+
+a:focus,
+a:active {
+    font-family: 'Inter Tight', sans-serif;
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+html,
+body {
+    font-family: 'Inter Tight', sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: 'Inter Tight', sans-serif;
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    font-family: 'Inter Tight', sans-serif;
+    display: none;
+}
+
+button {
+    font-family: 'Inter Tight', sans-serif;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    font-family: 'Inter Tight', sans-serif;
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    font-family: 'Inter Tight', sans-serif;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+.upper {
+    font-size: 18px;
+    padding: 36px 0 3px 0;
+}
+
+.lower {
+    padding: 50px 0 0 0;
+}
+
+.upper__link {
+    color: red;
+    font-weight: 600;
+}
+
+.main__empty-link {
+    color: rgb(108, 108, 108);
+}
+
+.column-first {
+    margin: 30px 0 0 0;
+}
+
+.column-second {
+    margin: 30px 0 0 0;
+    height: 500px;
+}
+
+
+.form__style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    right: 0px;
+    top: 0px;
+    border: 1px solid rgba(119, 119, 119, 0.3);
+    border-radius: 4px;
+    background-color: rgba(215, 240, 250, 0.2);
+}
+
+.form__header {
+    font-size: 18px;
+    color: black;
+    padding: 0 0 30px 0;
+    font-weight: 500;
+}
+
+.form__input {
+    font-size: 16px;
+    border: 1px solid rgb(119, 119, 119, 0.3);
+    width: 85%;
+    height: 32px;
+    padding: 0 0 0 8px;
+    margin: 0 0 30px 0;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.form__input_text {
+    padding: 5px 0 0 8px;
+    height: 72px;
+}
+
+.form__button {
+    width: 85%;
+    height: 32px;
+    background-color: antiquewhite;
+    color: black;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: 0.2s ease;
+}
+
+.form__btn {
+    position: relative;
+    padding: 1px 0 6px 0;
+}
+
+.form__button:hover {
+    background-color: rgb(249, 224, 191);
+}
+
+.form__order-taxi {
+    font-size: 15px;
+    line-height: 30px;
+    outline: 1px solid rgba(255,255,255,0.5);
+    outline-offset: -2px;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.75);
+    color: #202020;
+    text-transform: uppercase;
+    height: 38px;
+    width: 230px;
+    background: url(images/96.png);
+    border-radius: 2px;
+    transition: 0.3s ease all;
+    font-weight: 800;
+}
+
+.form__order-taxi:hover {
+    color: #be1313;
+    outline: 3px solid rgba(255,255,255,0.5);
+    outline-offset: -6px;
+    font-weight: 800;
+}
+
+.hidden__form {
+    width: 100%;
+    padding: 27px 20px 20px 20px;
+    display: none;
+}
+
+.centered__block {
+    text-align: center;
+}
+
+.commentaries__element {
+    padding: 20px;
+    margin: 0 0 40px 0;
+    background-color: rgb(228, 228, 228);
+    border-radius: 4px;
+}
+
+.commentaries__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentaries__name {
+    color: blue;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.commentaries__date {
+    color: rgb(138, 138, 138);
+    font-size: 16px;
+}
+
+.commentaries__text {
+    padding: 12px 0 0 0;
+    color: black;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+@media (max-width: 745px) {
+    .hidden__form {
+        display: block;
+    }
+}
+
+@media (max-width: 530px) {
+    .commentaries__element {
+        padding: 14px;
+        font-family: 'Inter Tight', sans-serif;
+    }
+
+    .commentaries__date {
+        font-size: 14px;
+    }
+
+    .commentaries__name {
+        font-size: 17px;
+    }
+
+    .form__style {
+        position: block;
+    }
+
+    .form__order-taxi {
+        font-size: 14px;
+        height: 36px;
+        width: 190px;
+    }
+}

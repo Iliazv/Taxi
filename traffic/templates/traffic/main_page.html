@@ -1,0 +1,487 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'traffic/images/taxi_favicon.ico' %}" />
+    <link rel="stylesheet" type='text/css' href="{% static 'traffic/taxi_style.css' %}">
+    <script type="text/javascript" src="{% static 'traffic/switch.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Taxi910</title>
+</head>
+
+<body>
+   <div class="wrapper">
+        <div class="content">
+            <div class="container">
+                <div class="picture">
+                    <img src="{% static '../static/traffic/images/taxi.png' %}" alt="" class="pictire__logo">
+                    <img src="{% static '../static/traffic/images/ru.png' %}" alt="" class="pictire__ru">
+                    <img src="{% static '../static/traffic/images/18.png' %}" alt="" class="pictire__cathedral">
+                    <img src="{% static '../static/traffic/images/25.png' %}" alt="" class="pictire__MSU">
+                    <img src="{% static '../static/traffic/images/16.png' %}" alt="" class="pictire__kremlin">
+                    <img src="{% static '../static/traffic/images/phones.png' %}" alt="" class="pictire__phone">
+                    <img src="{% static '../static/traffic/images/order.png' %}" alt="" class="pictire__order">
+                    <img src="{% static '../static/traffic/images/button.png' %}" alt="" class="pictire__button">
+                    <img src="{% static '../static/traffic/images/55.png' %}" alt="" class="pictire__bigbush1">
+                    <img src="{% static '../static/traffic/images/52.png' %}" alt="" class="pictire__shadow1">
+                    <img src="{% static '../static/traffic/images/53.png' %}" alt="" class="pictire__bigbush2">
+                    <img src="{% static '../static/traffic/images/54.png' %}" alt="" class="pictire__shadow2">
+                    <img src="{% static '../static/traffic/images/38.png' %}" alt="" class="pictire__bush1">
+                    <img src="{% static '../static/traffic/images/41.png' %}" alt="" class="pictire__bush2">
+                    <img src="{% static '../static/traffic/images/43.png' %}" alt="" class="pictire__bush3">
+                    <img src="{% static '../static/traffic/images/27.png' %}" alt="" class="pictire__bush4">
+                    <img src="{% static '../static/traffic/images/20.png' %}" alt="" class="pictire__road1">
+                    <img src="{% static '../static/traffic/images/22.png' %}" alt="" class="pictire__curb1">
+                    <img src="{% static '../static/traffic/images/21.png' %}" alt="" class="pictire__curb2">
+                    <img src="{% static '../static/traffic/images/71.png' %}" alt="" class="pictire__bird">
+                    <img src="{% static '../static/traffic/images/10.png' %}" alt="" class="pictire__curb3">
+                    <img src="{% static '../static/traffic/images/11.png' %}" alt="" class="pictire__sidewalk">
+                    <img src="{% static '../static/traffic/images/44.png' %}" alt="" class="pictire__big-lamp">
+                    <img src="{% static '../static/traffic/images/45.png' %}" alt="" class="pictire__small-lamp">
+                    <img src="{% static '../static/traffic/images/24.png' %}" alt="" class="pictire__curb-white">
+                    <img src="{% static '../static/traffic/images/48.png' %}" alt="" class="pictire__taxi">
+                    <img src="{% static '../static/traffic/images/51.png' %}" alt="" class="pictire__cap">
+                    <img src="{% static '../static/traffic/images/50.png' %}" alt="" class="pictire__thumb">
+                    <img src="{% static '../static/traffic/images/49.png' %}" alt="" class="pictire__taxi-sprite">
+                    <img src="{% static '../static/traffic/images/46.png' %}" alt="" class="pictire__taxi-shadow">
+                    <img src="{% static '../static/traffic/images/3.png' %}" alt="" class="pictire__sky">
+                </div>
+                
+               
+                <div class="double-column">
+                    <div class="column-first">
+                        <nav class="header">
+                            <ul class="header__list">
+                                <li><button class="header__btn" id="header__btn" onclick="viewDiv1()">Заказать такси</button></li>
+                                <img src="{% static '../static/traffic/images/a.png' %}" alt="" class="header__img1">
+                                <img src="{% static '../static/traffic/images/a.png' %}" alt="" class="header__img2">
+                                <li><button href="#" class="header__btn" id="header__btn_common1" onclick="viewDiv2()">Такси в аэропорт</button></li>
+                                <li><button href="#" class="header__btn" id="header__btn_common2" onclick="viewDiv3()">Такси на вокзал</button></li>
+                            </ul>
+                        </nav>
+
+                        <div id="div1">
+                            <div class="rate__block-1" id="rate__block-1">
+                                <div class="rate__column-1">
+                                    <div class="rate__element">День <img src="{% static '../static/traffic/images/93.png' %}" alt="" class="rate__sun"> (7:00 - 21:00)</div>
+                                    <div class="rate__element_tariff">Минимальный тариф: <span class="rate__highlight">350 руб.</span> (20 минут)</div><div class="rate__element_small">Мин. тариф: <span class="rate__highlight">350 руб.</span> (20 минут)</div>
+                                    <div class="rate__element">Далее: <span class="rate__highlight">11</span> руб./минута</div>
+                                </div>
+                                <div class="rate__column-2">
+                                    <div class="rate__element">Ночь <img src="{% static '../static/traffic/images/94.png' %}" alt="" class="rate__moon"> (21:00 - 7:00)</div>
+                                    <div class="rate__element_tariff">Минимальный тариф: <span class="rate__highlight">400 руб.</span> (20 минут)</div><div class="rate__element_small">Мин. тариф: <span class="rate__highlight">400 руб.</span> (20 минут)</div>
+                                    <div class="rate__element">Далее: <span class="rate__highlight">11</span> руб./минута</div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div id="div2">
+                            <div class="rate__block-1" id="rate__block-2">
+                                <div class="rate__column-1">
+                                    <div class="rate__element">День <img src="{% static '../static/traffic/images/93.png' %}" alt="" class="rate__sun"> (7:00 - 21:00)</div>
+                                    <div class="rate__element_tariff">Минимальный тариф: <span class="rate__highlight">480 руб.</span> (20 минут)</div><div class="rate__element_small">Мин. тариф: <span class="rate__highlight">480 руб.</span> (20 минут)</div>
+                                    <div class="rate__element">Далее: <span class="rate__highlight">18</span> руб./минута</div>
+                                </div>
+                                <div class="rate__column-2">
+                                    <div class="rate__element">Ночь <img src="{% static '../static/traffic/images/94.png' %}" alt="" class="rate__moon"> (21:00 - 7:00)</div>
+                                    <div class="rate__element_tariff">Минимальный тариф: <span class="rate__highlight">600 руб.</span> (20 минут)</div><div class="rate__element_small">Мин. тариф: <span class="rate__highlight">600 руб.</span> (20 минут)</div>
+                                    <div class="rate__element">Далее: <span class="rate__highlight">30</span> руб./минута</div>
+                                </div>
+                            </div>                           
+                        </div>
+
+                        <div id="div3">
+                            <div class="rate__block-1" id="rate__block-3">
+                                <div class="rate__column-1">
+                                    <div class="rate__element">День <img src="{% static '../static/traffic/images/93.png' %}" alt="" class="rate__sun"> (7:00 - 21:00)</div>
+                                    <div class="rate__element_tariff">Минимальный тариф: <span class="rate__highlight">450 руб.</span> (20 минут)</div><div class="rate__element_small">Мин. тариф: <span class="rate__highlight">450 руб.</span> (20 минут)</div>
+                                    <div class="rate__element">Далее: <span class="rate__highlight">16</span> руб./минута</div>
+                                </div>
+                                <div class="rate__column-2">
+                                    <div class="rate__element">Ночь <img src="{% static '../static/traffic/images/94.png' %}" alt="" class="rate__moon"> (21:00 - 7:00)</div>
+                                    <div class="rate__element_tariff">Минимальный тариф: <span class="rate__highlight">600 руб.</span> (20 минут)</div><div class="rate__element_small">Мин. тариф: <span class="rate__highlight">600 руб.</span> (20 минут)</div>
+                                    <div class="rate__element">Далее: <span class="rate__highlight">26</span> руб./минута</div>
+                                </div>
+                            </div>                           
+                        </div>
+                        
+                        <form action="{% url 'left_order' %}" method="post" enctype='multipart/form-data'>
+                            {% csrf_token %}
+                            <div class="order">
+                                <div class="order__form-block">
+                                    <div class="order__column_1">
+                                        <div class="order__name">
+                                            Заказ такси
+                                        </div>
+                                            <div class="order__time-block">
+                                                <div class="order__class">
+                                                    Когда:
+                                                </div>
+                                                    <select name="user_profile_color_1" required="required" class="order__select order__select_first">
+                                                        <option value="Сегодня">Сегодня</option>
+                                                        <option value="Завтра">Завтра</option>
+                                                        <option value="Послезавтра">Послезавтра</option>
+                                                    </select>
+                                                    <select name="user_profile_color_2" required="required" class="order__select order__select_time">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+
+
+
+                                                    </select>
+                                                    <select name="user_profile_color_3" required="required" class="order__select order__select_time">
+                                                        <div class="drop-content">
+                                                        <option value="0">0</option>
+                                                        <option value="05">05</option>
+                                                        <option value="10">10</option>
+                                                        <option value="15">15</option>
+                                                        <option value="20">20</option>
+                                                        <option value="25">25</option>
+                                                        <option value="30">30</option>
+                                                        <option value="35">35</option>
+                                                        <option value="40">40</option>
+                                                        <option value="45">45</option>
+                                                        <option value="50">50</option>
+                                                        <option value="55">55</option>
+                                                        <option value="59">59</option>
+                                                        </div>
+                                                    </select>
+                                                </div>
+                                                <div class="order__field-block">
+                                                    <div class="order__class">
+                                                        Куда:
+                                                    </div>
+                                                    <input type="text" name="start" class="order__input-where" placeholder="например, Шлюзовая наб, 4;" required>
+                                                </div>
+
+                                                <div class="order__field-block">
+                                                    <div class="order__class">
+                                                        Откуда:
+                                                    </div>
+                                                    <input type="text" name="finish" class="order__input-where" placeholder="например, Шлюзовая наб, 4;" required>
+                                                </div>
+                                                <div class="order__link-string">
+                                                    <a class="order__link tip" title="Это будет занимать не больше 12 минут с оформления заказа">Сколько это займет времени?</a>
+                                                </div>
+
+                                                <div class="order__field-block">
+                                                    <div class="order__class order__class_appear">
+                                                        Представьтесь:
+                                                    </div>
+                                                </div>
+
+                                                <div class="order__appear-block">
+                                                    <div class="order__distance">
+                                                        <input type="text" name="input_name" class="order__input-where" placeholder="Ваше имя" required>
+                                                    </div>
+                                                    <div class="order__distance">
+                                                        <input type="text" name="input_phone" class="order__input-where" placeholder="+7 (926) 369-25-26" required>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+                                    <!----       COLUMN           -->
+                                    <div class="order__column_2">
+                                        <div class="order__label">
+                                            Тип автомобиля:
+                                        </div>
+
+                                        <div class="order__radio-block">
+                                            {% for radio in form.level %}
+                                                <div class="order__tag">{{radio.tag}} {{ radio.choice_label }}</div>
+                                            {% endfor %}
+                                        </div>
+                                        
+                                        <div class="order__wishes">
+                                            Пожелания:
+                                        </div>
+
+                                        <div class="order__choices">
+                                            <input type="checkbox" id="coding" name="interest" value="chair" class="order__choice">
+                                            <label for="coding" class="order__label-style">детское кресло</label>
+                                        </div>
+
+                                        <div class="order__choices">
+                                            <input type="checkbox" id="coding" name="interest" value="salon">
+                                            <label for="coding" class="order__label-style">салон для курящих</label>
+                                        </div>
+
+                                        <div class="order__choices">
+                                            <input type="checkbox" id="coding" name="interest" value="taxi">
+                                            <label for="coding" class="order__label-style">женское такси</label>
+                                        </div>
+
+                                        <div class="order__choices">
+                                            <input type="checkbox" id="coding" name="interest" value="luggage">
+                                            <label for="coding" class="order__label-style">большой багажник</label>
+                                        </div>
+
+                                        <div class="order__link-string">
+                                            <a class="order__link tip" title="Вы можете связаться по телефону для уточнения информации">еще..</a>
+                                        </div>
+
+                                        <div class="order__btn">
+                                            <button type="submit" class="order__order-taxi">Вызвать такси</button>
+                                            <img src="{% static '../static/traffic/images/98.png' %}" alt="" class="order__back-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="information">
+                            <div class="information__hidden">
+                                <p class="hidden__link"><a href="{% url 'cars' %}" class="information__link">Смотреть все автомобили</a></p>
+                                <p class="hidden__link"><a href="{% url 'commentaries' %}" class="information__link information__link_shift">Смотреть все отзывы</a></p>
+                            </div>
+                            <div class="information__head">
+                                Компания Такси940
+                            </div>
+                            <ul class="information__list">
+                                <li>Номер #1 в рейтинге московски такси по версии Таксодром</li>
+                                <li>Подача машины за 12 минут с момента заказа</li>
+                                <li>Автомобили, оборудованные GPS</li>
+                                <li>В компании только иномарки эконом, комфорт, универсал класса</li>
+                            </ul>
+
+                            <div class="information__subtitle">
+                                Простой способ заказать быстрое и недорогое такси:
+                            </div>
+
+                            <div class="information__text">
+                                <p class="information__distance">Если вам срочно нужно добраться до нужного места, звоните нам.</p>
+                                <ul class="information__list">
+                                    <li>Заказ такси в несколько нажатий;</li>
+                                    <li>Подача машины за 10 минут;</li>
+                                    <li>Квалифицированные водители;</li>
+                                    <li>Gps-навигация в каждой машине;</li>
+                                    <li>Детские сидения, удобные места.</li>
+                                </ul>
+                                <p class="information__distance">Заказать дешевое такси в Барнауле на нашем сайте быстрее, чем на других. Выбирайте 
+                                    наиболее подходящее такси по параметрам Цена за км и Стоимость посадки. Звоните или сделайте онлайн заказ и получите
+                                     машину в самое ближайшее время. Быстро и с комфортом прибудете в любую точку Барнаула.</p>
+
+                                <p class="information__distance">Актуальная информация по службам такси Барнаула: номера телефонов, официальный 
+                                    сайт, тарифы и цены на услуги, вакансии и работа, контакты и адреса офисов. Наш список представляет рейтинг
+                                     самых популярных такси в Барнауле, все они уже долгие годы предоставляют свои услуги и заслужили доверие 
+                                     многих жителей города.</p>
+
+
+                                <p class="information__distance">Работа в такси Барнаула это постоянный высокий заработок, большое
+                                     количество заказов и приятное общение с людьми. Для каждой службы такси указаны имеющиеся вакансии 
+                                     и контакты по которым можно обратиться с вопросами о трудоустройстве.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column-second">
+                        <div class="hat">
+                            <div class="hat__row">
+                                <div class="hat__object">Мы принимаем</div>
+                                <img src="{% static '../static/traffic/images/78.png' %}" alt="" class="hat__visa">
+                                <img src="{% static '../static/traffic/images/79.png' %}" alt="" class="hat__mastercard">
+                            </div>
+                        </div>
+
+                        <div class="services">
+                            <div class="services__table">
+                                <div class="services__service">
+                                    <div class="services__name">
+                                        Услуги
+                                    </div>
+                                    <div class="services__links">
+                                        <ul class="services__list">
+                                            <li><a class="services__link">Встречи в аэропортах</a></li>
+                                            <li><a class="services__link">Встречи на вокзалах</a></li>
+                                            <li><a class="services__link">Аренда авто с водителем</a></li>
+                                            <li><a class="services__link">Корпоративным клиентам</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="services__line">
+
+                                    </div>
+                                </div>
+                            <!--</div>
+                            <div class="services__cars">-->
+                                <div class="services__list-cars">
+                                <div class="services__name services__name_cars">
+                                    Автомобили
+                                </div>
+
+                                <div class="services__column">
+                                    <div class="services__car">
+                                        <img src="{% static '../static/traffic/images/red_car.webp' %}" alt="" class="services__car_1">
+                                        <span class="services__category">Комфорт</span>
+                                    </div>
+                                    <div class="services__car">
+                                        <img src="{% static '../static/traffic/images/yellow_car.webp' %}" alt="" class="services__car_2">
+                                        <span class="services__category">Бизнес</span>
+                                    </div>
+                                    <div class="services__car">
+                                        <img src="{% static '../static/traffic/images/red_car1.webp' %}" alt="" class="services__car_3">
+                                        <span class="services__category">ВИП</span>
+                                    </div>
+                                    <div class="services__link-block">
+                                        <a href="{% url 'cars' %}" class="services__link_empty">...и еще много автомобилей</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="about">
+                            <div class="about__title">
+                                О нас пишут
+                            </div>
+                            <div class="about__comment">
+                                <div class="about__discuss">
+                                    <span class="about__highlight">Обсуждение:</span> Лучший перевозчик
+                                </div>
+                                <div class="about__site">
+                                    <span class="about__highlight">На сайте:</span> <a href="{% url 'commentaries' %}" class="services__link_empty services__link_taxi">Таксофорум.ру</a>
+                                </div>
+                                <div class="about__comment-text">
+                                    Лучшее такси в городе. Никто еще не отвозил меня домой так, как это сделал водитель службы 
+                                    Такси 940. Потрясающе! Буду пользователь услугами службы ежедневно, даже если никуда не поеду.
+                                </div>
+                            </div>
+
+                            <div class="about__comment">
+                                <div class="about__discuss">
+                                    <span class="about__highlight">Обсуждение:</span> Лучший заказчик
+                                </div>
+                                <div class="about__site">
+                                    <span class="about__highlight">На сайте:</span> <a href="{% url 'commentaries' %}" class="services__link_empty services__link_taxi">Таксофорум.ру</a>
+                                </div>
+                                <div class="about__comment-text">
+                                    Я такси в городе. Никто еще не отвозил меня домой так, как это сделал водитель службы 
+                                    Такси 940. Потрясающе! Буду пользователь услугами службы ежедневно, даже если никуда не поеду.
+                                </div>
+                            </div>
+
+                            <div class="about__comment">
+                                <div class="about__discuss">
+                                    <span class="about__highlight">Обсуждение:</span> Худший водитель
+                                </div>
+                                <div class="about__site">
+                                    <span class="about__highlight">На сайте:</span> <a href="{% url 'commentaries' %}" class="services__link_empty services__link_taxi">Таксофорум.ру</a>
+                                </div>
+                                <div class="about__comment-text">
+                                    Хуже быть уже не может. Никто еще не отвозил меня домой так, как это сделал водитель службы 
+                                    Такси 940. Ужас! Буду пользователь услугами службы никогда, даже если никуда не поеду.
+                                </div>
+                                <a href="{% url 'commentaries' %}" class="services__link_empty">Смотреть все отзывы</a>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lower">
+                    <div class="lower__card">
+                        <div class="lower__info-row">
+                            <div class="lower__info-block">
+                                <div class="lower__promotion">
+                                    Продвижение сайта
+                                </div>
+                                <div class="lower__venta">
+                                    <img src="{% static '../static/traffic/images/57.png' %}" alt="" class="lower__venta-image">
+                                </div>
+                                <img src="{% static '../static/traffic/images/58.png' %}" alt="" class="lower__traffic-image">
+                            </div>
+
+                            <div class="lower__info-block small__fade">
+                                <div class="lower__title">Такси в аэропорт</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a class="lower__link">Шереметьево</a></li>
+                                        <li><a class="lower__link">Домодедово</a></li>
+                                        <li><a class="lower__link">Внуково</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower__info-block">
+                                <div class="lower__title">Связь с поддержкой</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a href="{% url 'commentaries' %}" class="lower__link">Оставить отзыв</a></li>
+                                        <li><a href="https://facebook.com/" class="lower__link">Группа Facebook</a></li>
+                                        <li><a href="https://web.telegram.org/z/" class="lower__link">Чат Telegram</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="lower__info-block">
+                                <div class="lower__title">Информация</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a href="{% url 'cars' %}" class="lower__link">Список автомобилей</a></li>
+                                        <li><a href="#div1" class="lower__link">Расчет стоимости поездки</a></li>
+                                        <li><a href="#" class="lower__link">Главная страница</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower__info-block">
+                                <div class="lower__title">О компании</div>
+                                <div class="lower__links">
+                                    <ul class="lower__list">
+                                        <li><a href="{% url 'contacts' %}" class="lower__link">Контакты</a></li>
+                                        <li><a href="{% url 'about' %}" class="lower__link">О нас</a></li>
+                                        <li><a href="{% url 'message' %}" class="lower__link">Диспетчерская служба</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__row">
+                <div class="footer__copyright">
+                    © 2020-2023 Taxi940
+                </div>
+                <div class="footer__networks">
+                    <a href="https://facebook.com/" class="crop"><img src="{% static '../static/traffic/images/facebook.png' %}" alt="" class="footer__icon"></a>
+                    <a href="https://web.telegram.org/z/" class="crop"><img src="{% static '../static/traffic/images/telegram.png' %}" alt="" class="footer__icon"></a>
+                </div>
+            </div>
+        </footer>
+   </div>
+</body>
+
+</html>
